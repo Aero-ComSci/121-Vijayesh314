@@ -1,9 +1,8 @@
 # a121_catch_a_turtle.py
 #-----import statements-----
 import turtle as t
-import time
 import random
-from tkinter import Tk
+import tkinter
 
 #-----game configuration----
 torterracolor = "Green"
@@ -13,7 +12,11 @@ torterrashape = "turtle"
 global score
 score = 0
 global time_left
-time_left = 60
+time_left = 30
+global playagain
+playagain = ""
+global color_list
+color_list = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 
 #-----initialize turtle-----
 torterra = t.Turtle()
@@ -42,35 +45,38 @@ def update_score():
     score += 10
     scoreboard.write(f"Score: {score}", font=("Calibri", 15, "normal"))
 
-game_over = False
-def time_up():
-    global game_over
-    game_over = True
+timer_up = False
 
 def torterraClicked(x, y):
-    global torterrasize
+    global torterrasize, torterracolor
     torterra.penup()
-    torterra.goto(random.randrange(-400, 400), random.randrange(-300, 300))
+    torterra.stamp()
+    torterra.color(color_list[random.randrange(0,6)])
+    torterra.goto(random.randrange(-300, 300), random.randrange(-300, 300))
     update_score()
-    if game_over:
+    torterrasize *= 0.8
+    if timer_up:
         timer.write("Game Over", font=("Calibri", 15, "normal"))
         torterra.hideturtle()
 
 def countdown():
-  global time_left, timer_up
+  global time_left, timer_up, playagain, score
   timer.clear()
   if time_left <= 0:
     timer.write("Time's Up", font=("Calibri", 15, "normal"))
     timer_up = True
+    playagain = tkinter.messagebox.showinfo("Final Score", f"Your Final Score is {score}")
+    exit()
   else:
     timer.write("Timer: " + str(time_left), font=("Calibri", 15, "normal"))
     time_left -= 1
     timer.getscreen().ontimer(countdown, 1000) 
 
-torterra.onclick(torterraClicked)
-
 #-----events----------------
 wn = t.Screen()
 wn.bgcolor("light gray")
-countdown()
+root = tkinter.Tk()
+def start_game():
+    torterra.onclick(torterraClicked)
+    countdown()
 wn.mainloop()
