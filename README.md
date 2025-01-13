@@ -11,6 +11,6 @@
 ![video](https://github.com/Aero-ComSci/121-Vijayesh314/blob/main/121.py%20-%20Vijayesh%20-%20Visual%20Studio%20Code%202025-01-12%2023-59-28.mp4)
 
 4. Choose two snapshots of code that demonstrate the algorithm(s) used to implement the additional features. Explain the code in the screenshots.
+![Screenshot 2025-01-13 001513](https://github.com/user-attachments/assets/a44429ec-e2be-49c1-925f-7e8b401acbb8)
 
-
-
+![Screenshot 2025-01-13 001553](https://github.com/user-attachments/assets/1a4ee53b-16b6-4019-b460-14e602555a0c)
