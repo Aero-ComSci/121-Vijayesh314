@@ -14,7 +14,7 @@
 
 ![Screenshot 2025-01-13 001513](https://github.com/user-attachments/assets/a44429ec-e2be-49c1-925f-7e8b401acbb8)
 
-This function in the code changes the color and size of the turtle every time it's clicked.
+This code stamps the turtle's current position on the screen using torterra.stamp() and then changes its color to a random choice from the color_list. It also adjusts the turtle's size by multiplying torterrasize by a random scaling factor between 0.5 and 1.
 
 ![Screenshot 2025-01-13 001553](https://github.com/user-attachments/assets/1a4ee53b-16b6-4019-b460-14e602555a0c)
 
