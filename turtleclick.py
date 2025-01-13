@@ -51,6 +51,7 @@ def torterraClicked(x,y):
     global torterrasize, torterracolor, timer_up
     torterra.penup()
     torterra.stamp()
+    color_list = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
     torterra.color(color_list[random.randrange(0,6)])
     torterra.goto(random.randrange(-300, 300), random.randrange(-300, 300))
     update_score()
