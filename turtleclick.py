@@ -2,7 +2,7 @@
 #-----import statements-----
 import turtle as t
 import random
-import tkinter
+import tkinter.messagebox
 
 #-----game configuration----
 torterracolor = "Green"
@@ -47,14 +47,14 @@ def update_score():
 
 timer_up = False
 
-def torterraClicked(x, y):
-    global torterrasize, torterracolor
+def torterraClicked(x,y):
+    global torterrasize, torterracolor, timer_up
     torterra.penup()
     torterra.stamp()
     torterra.color(color_list[random.randrange(0,6)])
     torterra.goto(random.randrange(-300, 300), random.randrange(-300, 300))
     update_score()
-    torterrasize *= 0.8
+    torterrasize *= random.choice([0.5, 0.6, 0.7, 0.8, 0.9, 1])
     if timer_up:
         timer.write("Game Over", font=("Calibri", 15, "normal"))
         torterra.hideturtle()
@@ -75,8 +75,8 @@ def countdown():
 #-----events----------------
 wn = t.Screen()
 wn.bgcolor("light gray")
-root = tkinter.Tk()
 def start_game():
     torterra.onclick(torterraClicked)
     countdown()
+start_game()
 wn.mainloop()
