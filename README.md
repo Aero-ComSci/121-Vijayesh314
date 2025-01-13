@@ -13,7 +13,9 @@
 4. Choose two snapshots of code that demonstrate the algorithm(s) used to implement the additional features. Explain the code in the screenshots.
 
 ![Screenshot 2025-01-13 001513](https://github.com/user-attachments/assets/a44429ec-e2be-49c1-925f-7e8b401acbb8)
+
 This function in the code changes the color and size of the turtle every time it's clicked.
 
 ![Screenshot 2025-01-13 001553](https://github.com/user-attachments/assets/1a4ee53b-16b6-4019-b460-14e602555a0c)
+
 This function in the code starts the game by starting the countdown after the first click.
