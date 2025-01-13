@@ -18,4 +18,4 @@ This code stamps the turtle's current position on the screen using torterra.stam
 
 ![Screenshot 2025-01-13 001553](https://github.com/user-attachments/assets/1a4ee53b-16b6-4019-b460-14e602555a0c)
 
-This function in the code starts the game by starting the countdown after the first click.
+This function in the code starts the game after the first click of the turtle and starts using the countdown timer. This setup is done through the countdown function. 
